@@ -1,6 +1,5 @@
 # Define MVC PHP 8 #
 
----
 Define MVC is a ***Front Controller*** based light weight MVC framework for developing web based applications. It is an open source and will remain always.
 
 ### Define MVC PHP 5.3 - 7.2 ### 
