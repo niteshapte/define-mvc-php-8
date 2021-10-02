@@ -88,7 +88,7 @@ try {
     $container->offsetSet('FRAMEWORK', Framework::getInstance());
     $container->offsetSet('SESSION', Session::getInstance());
     $container->offsetSet('LOGGER', Logger::getInstance());
-    $container->offsetSet('MARIADB', new DatabaseBean("MARIADB", "localhost", "root", "nitesha", "phpmyadmin", "3306", "phpmyadmin"));
+    $container->offsetSet('MARIADB', new DatabaseBean("MARIADB", "host", "username", "pass", "schema", "3306", "db"));
     $session = $container->offsetGet('SESSION');
     $default = array();
     $container->offsetGet('FRAMEWORK')->init(Router::getInstance(), $default);
