@@ -35,7 +35,7 @@ NameVirtualHost *:80
 </pre>
 
 Add below line in `/etc/hosts` file - <br> 
-`127.0.0.1      www<area>.define.mvc`
+`127.0.0.1      www.define.mvc`
 
 Run below command on terminal to restart apache - <br>
 `service apache2 restart`
