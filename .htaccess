@@ -14,6 +14,10 @@ DirectoryIndex bootstrap.php
 
 RewriteEngine On
 RewriteBase /
+RewriteRule ^css/(.*)$ application/view/assets/css/$1
+RewriteRule ^js/(.*)$ application/view/assets/js/$1
+RewriteRule ^img/(.*)$ application/view/assets/img/$1
+RewriteRule ^fonts/(.*)$ application/view/assets/fonts/$1
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ bootstrap.php/$1
