@@ -99,7 +99,7 @@ class UserController extends ApplicationController {
 	}
 }
 </pre>
-Check IndexController inside application/controller to get more details. 
+Check IndexController inside `application/controller` to get more details. 
 
 ### View ###
 All the view files will be inside `application/view/` folder.
