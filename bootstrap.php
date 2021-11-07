@@ -40,8 +40,6 @@ ini_set('display_errors', "1");
 
 ob_start();
 session_start();
-session_regenerate_id();
-
 
 # Access to all the pages will be possible only through bootstrap. After all this is a front controller based MVC Framework.
 const DIRECT_ACCESS = true;
@@ -88,7 +86,7 @@ try {
     $container->offsetSet('FRAMEWORK', Framework::getInstance());
     $container->offsetSet('SESSION', Session::getInstance());
     $container->offsetSet('LOGGER', Logger::getInstance());
-    $container->offsetSet('MARIADB', new DatabaseBean("MARIADB", "host", "username", "pass", "schema", "3306", "db"));
+    $container->offsetSet('MARIADB', new DatabaseBean("MARIADB", "localhost", "root", "nitesha", "phpmyadmin", "3306", "phpmyadmin"));
     $session = $container->offsetGet('SESSION');
     $default = array();
     $container->offsetGet('FRAMEWORK')->init(Router::getInstance(), $default);
