@@ -79,7 +79,9 @@ class PostgresDBDriver implements IDatabase {
      * @return IDatabase
      */
     public function executeSql(string $query, array $parameter = array()) : IDatabase {
-        $this->sqlExec = pg_execute($this->conn, $query, $parameter);
+        $stmtName = uniqid();
+        pg_prepare($this->conn, $stmtName, $query);
+        $this->sqlExec = pg_execute($this->conn, $stmtName, $parameter);
         return $this;
     }
 
